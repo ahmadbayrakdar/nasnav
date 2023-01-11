@@ -1,0 +1,14 @@
+.productPathContainer{
+    border-bottom: solid 1px #666;
+    
+    .productPath{
+        font-weight: bold;
+        padding: 30px 0;
+        margin: 0 auto;
+        width: clamp(800px,60%,1130px);
+
+        a{
+            color: #000;
+        }
+    }
+}

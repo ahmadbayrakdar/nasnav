@@ -3,6 +3,9 @@ import './App.css';
 import TopNav from './components/TopNav';
 import SearchBarContainer from './components/SearchBarContainer';
 import Varities from './components/Varities';
+import Footer from './components/Footer';
+
+import ProductContent from './components/ProductContent';
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
       <TopNav />
       <SearchBarContainer />
       <Varities />
-      <h1>hi</h1>
+      <ProductContent />
+      <Footer />
     </div>
   );
 }
