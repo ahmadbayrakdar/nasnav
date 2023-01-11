@@ -1,15 +1,24 @@
-.varitiesBar{
+.varitiesBarContainer{
     background-color: #000;
-    color: #fff;
-    height: 48px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: 600;
-    padding: 0 16vw;
 
-    .offersText{
-        color: #F11133;
+    .varitiesBar{
+        color: #fff;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        width: clamp(500px, 100% - 100px, 1300px);
+        margin: 0 auto;
+        padding: 0 25px;
+
+        .VaritiesItem{
+            padding: 0 10px;
+        }
+
+        .offersText{
+            color: #F11133;
+        }
     }
 }
