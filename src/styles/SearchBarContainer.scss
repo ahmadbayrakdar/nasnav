@@ -39,12 +39,14 @@
         .searchBarActions{
             display: flex;
             flex-direction: row;
-
+            
             .searchBarActionItem{
                 display: flex;
                 flex-direction: row;
                 font-weight: 700;
                 padding: 0 7px;
+                user-select: none;
+                cursor: pointer;
 
                 > *{
                     padding: 0 7px;

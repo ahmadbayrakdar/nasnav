@@ -10,7 +10,7 @@ function SearchBarContainer(){
                 </div>
                 <img src={process.env.PUBLIC_URL + "/images/Group 346.svg"} />
                 <div className="searchBarActions">
-                    <div className="searchBarActionItem">
+                    <div className="searchBarActionItem displayCartButton">
                         <div className="cartIcon">
                             <img src={process.env.PUBLIC_URL + "/images/Path 772.svg"}/>
                             <div className="cartItemsCount">0</div>
