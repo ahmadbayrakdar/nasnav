@@ -2,7 +2,7 @@
     border-bottom: solid 1px #666;
     
     .productPath{
-        font-weight: bold;
+        font-weight: 600;
         padding: 20px 35px;
         margin: 0 auto;
         width: clamp(500px, 100% - 100px, 1300px);        
@@ -24,11 +24,29 @@
         display: flex;
         flex-direction: column;
 
-        .mainImage{
-            object-fit: contain;
+        .mainImageContainer{
             width: clamp(200px ,40vw ,568px);
             max-height: 568px;
             border-radius: 10px;
+            position: relative;
+
+            .mainImage{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .fullDegreeImage{
+            position: absolute;
+            content: 'hi';
+            top: 24px;
+            left: 24px;
+            width: clamp(40px, 11%, 64%);
+            height: clamp(40px, 11%, 64%);
+            background-color: #fff;
+            border-radius: 7px;
+            padding: 8px;
+            box-shadow: 0px 0px 3px #00000040;
         }
 
         .bottomImageCarousel{
@@ -43,12 +61,14 @@
                 max-height: 120px;
                 border-radius: 10px;
                 padding: 0 5px;
+                cursor: pointer;
             }
 
             img.carouselArrow{
                 width: 5%;
                 height: 24px;
                 padding: 0 5px;
+                cursor: pointer;
             }
         }
     }
@@ -178,6 +198,7 @@
                         width: 100%;
                         height: 100;
                         object-fit: cover;
+                        pointer-events: none;
                     }
                 }
                 .colorElement.active{
@@ -211,6 +232,7 @@
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    user-select: none;
 
                     > img{
                         width: 12px;
