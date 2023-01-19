@@ -1,6 +1,11 @@
+import $ from 'jquery';
+import { useEffect, useState } from 'react';
 import '../styles/Cart.scss';
 
+import CartProduct from './CartProduct.js'
+
 function Cart() {
+
     return(
         <div className="cartContainer disabled">
             <div className="cartBackground">
@@ -8,23 +13,23 @@ function Cart() {
             </div>
             <div className="myCart">
                 <div className="myCartTitle">My Cart</div>
-                <div className="cartSummary">Cart Summary</div>
-                <div className="cartProduct">
-                    <img src={require("../images/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg")}/>
-                    <div className="cartProductInfo">
-                        <h5>Lorem ipsum dolor sit amet, consecte adipiscing elit.</h5>
-                        <p>Quantity: 1</p>
-                        <div className="cartProductPrice">
-                            <div>9.999</div>
-                            <div className="cartProductCurrency">LE</div>
-                        </div>
-                        <button className="removeFromCartButton">Remove</button>
-                    </div>
+                <div className="emptyCart">
+                    <img src={process.env.PUBLIC_URL + "../../images/shopping-cart-question.svg"} />
+                    <h4>Your Cart Is Empty</h4>
                 </div>
-                <div className="cartTotalPrice">Total: 19,999 LE</div>
-                <div className="cartActions">
-                    <button className="reviewCartButton">Review Cart</button>
-                    <button className="completeCheckoutButton">Complete Checkout</button>
+                <div className="fullCart">
+                    <div className="cartSummary">Cart Summary</div>                    
+
+                    {/* {this.props.dataFromParent} */}
+                    {/* <CartProduct /> */}
+                    
+                    <Cart />
+
+                    <div className="cartTotalPrice">Total: 19,999 LE</div>
+                    <div className="cartActions">
+                        <button className="reviewCartButton">Review Cart</button>
+                        <button className="completeCheckoutButton">Complete Checkout</button>
+                    </div>
                 </div>
             </div>
             <div className="closeCartButton">

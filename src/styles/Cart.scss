@@ -28,6 +28,25 @@
             font-size: 28px;
             font-weight: bold;
         }
+        
+        .emptyCart{
+            text-align: center;
+            padding: 50px;
+        }
+
+        // .fullCart{
+        //     overflow-y: scroll;
+        // }
+
+        // .fullCart::-webkit-scrollbar{
+        //     width: 5px;
+        //     height: 4px;
+        //     background-color: #aaa;
+        // }
+
+        .fullCart::-webkit-scrollbar-thumb {
+            background: #000;
+          }
 
         .cartSummary{
             width: 100%;

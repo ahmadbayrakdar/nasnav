@@ -263,11 +263,13 @@
             button.addToCartButton{
                 background-color: var(--secondary-color);
                 color: #fff;
+                cursor: pointer;
             }
             
             button.pickupFromStoreButton{
                 background-color: var(--primary-color);
                 margin: 0 32px;
+                cursor: pointer;
             }
         }
     }

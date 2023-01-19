@@ -68,7 +68,7 @@ function ProductContent() {
     );
     
     const productColors = productData.colors.map((color) =>
-        <div data-value={color.id} className="colorElement" key={color.id} onClick={toggleActiveClass}>
+        <div data-value={color.id} className="colorElement" key={color.id} name={color.value} onClick={toggleActiveClass}>
             {/* <img src={require(`../images/${color.imageUrl}`)} /> */}
                 <img src={color.imageUrl} />
         </div>
@@ -106,7 +106,7 @@ function ProductContent() {
                 </div>
                 <div className="ProductInfo">
                     <img src={process.env.PUBLIC_URL + "/images/Group 346.svg"} />
-                    <h3>Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                    <h3 className="productName">Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <div className="subTitle">Men</div>
                     <div className="ratingStarsContainer">
                         <div className="ratingStars">
