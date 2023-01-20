@@ -32,6 +32,8 @@ function App() {
   useEffect(() => {
     if(getCookie("cookie id array")){
       setItemsInCart(getCookie("cookie id array").split(",").length);
+    }else{
+      setItemsInCart(0);
     }
   })  
 
