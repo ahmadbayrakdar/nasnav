@@ -8,6 +8,15 @@
   --secondary-color: #542E90;
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--secondary-color);
+}
+
 .appContainer{
   position: relative;
 }

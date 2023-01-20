@@ -1,6 +1,6 @@
 import '../styles/SearchBarContainer.scss';
 
-function SearchBarContainer(){
+function SearchBarContainer(props){
     return(
         <div className="searchBarParent">
             <div className="searchBarContainer">
@@ -10,10 +10,10 @@ function SearchBarContainer(){
                 </div>
                 <img src={process.env.PUBLIC_URL + "/images/Group 346.svg"} />
                 <div className="searchBarActions">
-                    <div className="searchBarActionItem displayCartButton">
+                    <div className="searchBarActionItem displayCartButton" onClick = {() => props.displayCartFunction()}>
                         <div className="cartIcon">
                             <img src={process.env.PUBLIC_URL + "/images/Path 772.svg"}/>
-                            <div className="cartItemsCount">0</div>
+                            <div className="cartItemsCount">{props.cartItems}</div>
                         </div>
                         <div className="contactInfoTitle">Cart</div> 
                     </div>

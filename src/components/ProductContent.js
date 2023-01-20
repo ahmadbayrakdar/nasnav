@@ -5,7 +5,7 @@ import '../styles/ProductContent.scss';
 import starOutline from '../images/starOutline.svg';
 import starFilled from '../images/starFilled.svg';
 
-function ProductContent() {
+function ProductContent(props) {
     
     const [quantity, setQuantity] = useState(1);
     
@@ -22,44 +22,16 @@ function ProductContent() {
             {id: 2, value: 'Red', imageUrl: require('../images/Group 356@2x.png')}
         ],
     })
-
-    // const addObjectToArray = obj => {
-    //     SetProductData(current => ({
-    //         ...current,
-    //         sizes: [...current.sizes, obj]
-    //     }));
-    // };
     
     const toggleActiveClass = function(e) {
-        // $(e.target).each((p)=>{
-        //     console.log(p)
-        // })
         $(e.target).siblings('.active').removeClass('active')
         $(e.target).addClass('active')
-        // console.log(e.target)
     }
 
     useEffect(() => {
         $('.sizeElement:first-of-type').addClass('active')
         $('.colorElement:first-of-type').addClass('active')
-        // addObjectToArray( {id: 6, value: 'XXX Large', isActive: false} )
     }, [])
-
-    // const updateObjectInArray = () => {
-    //     SetProductData(current => ({
-    //         ...current,
-    //         sizes: [
-    //             current.map((obj) => {
-    //                 if (obj.id === 2) {
-    //                 return {...obj, isActive: true};
-    //             }
-        
-    //         ]
-    //         return obj;
-    //       }),
-    //     );
-    //     })
-    //   };
 
     const productSizes = productData.sizes.map((size) =>
         <div data-value={size.id} className="sizeElement" key={size.id} onClick={toggleActiveClass}>
@@ -69,7 +41,6 @@ function ProductContent() {
     
     const productColors = productData.colors.map((color) =>
         <div data-value={color.id} className="colorElement" key={color.id} name={color.value} onClick={toggleActiveClass}>
-            {/* <img src={require(`../images/${color.imageUrl}`)} /> */}
                 <img src={color.imageUrl} />
         </div>
     );
@@ -97,10 +68,10 @@ function ProductContent() {
                     </div>
                     <div className="bottomImageCarousel">
                         <img className="carouselArrow" src={process.env.PUBLIC_URL + "/images/Path 347.svg"} />
-                        <img className="bottomImage" src={require("../images/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg")} />
-                        <img className="bottomImage" src={require("../images/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg")} />
-                        <img className="bottomImage" src={require("../images/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg")} />
-                        <img className="bottomImage" src={require("../images/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg")} />
+                        <img className="bottomImage" src={require("../images/Group 333.png")} />
+                        <img className="bottomImage" src={require("../images/Group 331.png")} />
+                        <img className="bottomImage" src={require("../images/Group 329.png")} />
+                        <img className="bottomImage" src={require("../images/Group 335.png")} />
                         <img className="carouselArrow" src={process.env.PUBLIC_URL + "/images/Path 346.svg"} />
                     </div>
                 </div>
@@ -157,7 +128,7 @@ function ProductContent() {
                             </div>
                         </div>
                         <div className="productActionsContainer">
-                            <button className="addToCartButton">Add To Cart</button>
+                            <button className="addToCartButton" onClick={() => props.addToCartFunction()}>Add To Cart</button>
                             <button className="pickupFromStoreButton">Pickup From Store</button>
                         </div>
                     </div>
